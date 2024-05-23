@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#5D3887" />
+    <title>IMC</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header class="encabezamiento">
+        <img src="./img/logo.png" alt="logo">
+        <h1>CALCULE SU ÍNDICE DE MASA CORPORAL - IMC</h1>
+    </header>
+
+    <div class="imagen-de-fondo">
+        <img src="./img/fondo.png" alt="fondo">
+    </div>
+
+    <form class="formulario" id="formulario">
+        <div class="datos">
+            <div>
+                <label for="peso">PESO (kg)</label>
+                <input type="number" id="peso" step="any" required>
+            </div>
+
+            <div>
+                <label for="estatura">ESTATURA (m)</label>
+                <input type="number" id="estatura" step="any" required>
+            </div>
+        </div>
+
+        <div class="resultado">
+            <h5>RESULTADO IMC</h5>
+            <h3 id="resultado">00.00</h3>
+            <h5 id="estado">ESTADO</h5>
+        </div>
+
+        <button class="boton" type="submit">Calcular IMC</button>
+    </form>
+
+
+    <footer class="pie-de-pagina">
+        <p>Created By Emelyn Espinal </p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+
+</body>
+
+</html>
