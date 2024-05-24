@@ -2,12 +2,12 @@
 
 /* ==================== VARIABLES ==================== */
 :root {
-  --color-1: #794FAE;
-  --color-2: #EFE4FF;
-  --color-3: #1BBACC;
+  --color-1: #1BBACC;
+  --color-2: #7A71C0;
+  --color-3: #E5E7E8;
 
   --blanco: #f7f7f7;
-  --negro: #5D3887;
+  --negro: #433B82;
 
 }
 
@@ -40,14 +40,14 @@
 .encabezado h1 {
   font-size: .9rem;
   text-align: center;
-  color: var(--blanco);
-  font-weight: 300;
+  color: var(--negro);
+  font-weight: 400;
   padding-top: .5rem;
 }
 
-/* ==================== imagen de fondo ==================== */
+/* ==================== doctora ==================== */
 .imagen-doctora {
-  height: 10rem;
+  height: 12rem;
   overflow: hidden;
 }
 
@@ -58,7 +58,7 @@
 /* ==================== FORMULARIO ==================== */
 
 .formulario {
-  padding: 1rem 2rem;
+  padding: 0rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
   gap: .5rem;
@@ -68,12 +68,12 @@
 .formulario .datos {
   display: flex;
   gap: 1rem;
+  background: var(--color-3);
+  border-radius: .5rem;
 }
 
 .formulario .datos div {
-  background: var(--color-2);
   padding: .5rem;
-  border-radius: .5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -97,7 +97,7 @@
 }
 
 .formulario .resultado {
-  background: var(--color-2);
+  background: var(--color-3);
   border-radius: .5rem;
   padding: 1rem;
   text-align: center;
@@ -115,7 +115,7 @@
 }
 
 .formulario .boton {
-  background: var(--color-3);
+  background: var(--color-2);
   border-radius: 2rem;
   padding: 1rem;
   cursor: pointer;
