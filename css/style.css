@@ -3,7 +3,7 @@
 /* ==================== VARIABLES ==================== */
 :root {
   --color-1: #1BBACC;
-  --color-2: #7A71C0;
+  --color-2: #8b71c0;
   --color-3: #E5E7E8;
 
   --blanco: #f7f7f7;
@@ -137,7 +137,7 @@
 
 .pie-de-pagina p {
   font-size: .9rem;
-  color: var(--blanco);
+  color: var(--negro);
   font-weight: 300;
   text-align: center;
 }
