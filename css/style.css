@@ -1,75 +1,73 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* ==================== VARIABLES ==================== */
+/* ==================== variables ==================== */
 :root {
   --color-1: #1BBACC;
   --color-2: #8b71c0;
   --color-3: #E5E7E8;
-
   --blanco: #f7f7f7;
   --negro: #433B82;
-
 }
 
-/* ==================== CONFIGURACIÓN INICIAL ==================== */
+/* ==================== configuración inicial ==================== */
+
 * {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
+  font-family: "Poppins", sans-serif;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  outline: none;
   border: none;
   text-decoration: none;
   list-style: none;
-  transition: all .2s linear;
+  transition: all 0.25s linear;
 }
 
-
 /* ==================== encabezado ==================== */
+
 .encabezado {
   background: var(--color-1);
-  padding: 1rem 1rem 1rem 1rem;
+  background: linear-gradient(90deg, rgba(27, 186, 204, 1) 0%, rgba(174, 176, 191, 1) 17%, rgba(213, 169, 184, 1) 36%, rgba(240, 188, 164, 1) 50%, rgba(253, 214, 155, 1) 62%, rgba(237, 234, 155, 1) 78%, rgba(204, 228, 168, 1) 100%);
+  padding: 1rem;
+  text-align: center;
 }
 
 .encabezado img {
-  display: block;
-  width: 4rem;
-  margin: 0 auto;
+  width: 5rem;
 }
 
 .encabezado h1 {
   font-size: .9rem;
-  text-align: center;
   color: var(--negro);
-  font-weight: 400;
-  padding-top: .5rem;
+  font-weight: 500;
 }
 
+
+
 /* ==================== doctora ==================== */
-.imagen-doctora {
-  height: 12rem;
+.doctora {
+  height: 13rem;
   overflow: hidden;
 }
 
-.imagen-doctora img {
+.doctora img {
   width: 100%;
 }
 
-/* ==================== FORMULARIO ==================== */
 
+/* ==================== formulario ==================== */
 .formulario {
-  padding: 0rem 2rem 2rem 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
   background: var(--blanco);
+  padding: 0rem 2rem 2rem 2rem;
 }
 
+/*  datos  */
 .formulario .datos {
+  background: var(--color-3);
+  padding: .5rem;
+  border-radius: .5rem;
   display: flex;
   gap: 1rem;
-  background: var(--color-3);
-  border-radius: .5rem;
+
 }
 
 .formulario .datos div {
@@ -79,6 +77,7 @@
   justify-content: center;
   flex-direction: column;
   gap: 1rem;
+  width: 100%;
 }
 
 .formulario .datos div label {
@@ -87,16 +86,16 @@
 }
 
 .formulario .datos div input {
-  background: var(--blanco);
-  padding: .1rem;
+  width: 100%;
+  padding: .5rem;
+  border-radius: .5rem;
   font-size: 2rem;
   text-align: center;
-  border-radius: .5rem;
-  width: 100%;
-  color: var(--negro);
 }
 
+/* resultado  */
 .formulario .resultado {
+  margin-top: .5rem;
   background: var(--color-3);
   border-radius: .5rem;
   padding: 1rem;
@@ -114,14 +113,16 @@
   color: var(--negro);
 }
 
+/* boton  */
 .formulario .boton {
+  font-size: 1.1rem;
   background: var(--color-2);
+  width: 100%;
   border-radius: 2rem;
   padding: 1rem;
   cursor: pointer;
   color: var(--blanco);
-  font-size: 1.1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -129,24 +130,27 @@
   transform: scale(1.02);
 }
 
-/* ==================== pie de pagina ==================== */
-.pie-de-pagina {
+
+/* ==================== pie de página ==================== */
+.pie {
   background: var(--color-1);
   padding: 1rem;
-}
-
-.pie-de-pagina p {
-  font-size: .9rem;
-  color: var(--negro);
-  font-weight: 300;
   text-align: center;
 }
 
-/* ==================== MEDIA QUERY ==================== */
-@media screen and (min-width:768px) {
+.pie p {
+  font-size: 1rem;
+  color: var(--negro);
+
+}
+
+/* ==================== PARA PANTALLAS PC ==================== */
+
+
+@media (width > 1024px) {
   body {
     width: 30%;
     margin: 0 auto;
-    background: var(--negro);
+    background: var(--color-2);
   }
 }

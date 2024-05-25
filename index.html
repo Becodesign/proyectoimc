@@ -4,50 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IMC Emelyn Espinal</title>
+    <title>EVA</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/icono.png" type="image/x-icon">
 </head>
 
 <body>
     <header class="encabezado">
-        <img src="./img/logo.png" alt="logo">
+        <img src="./img/logo.png">
         <h1>CALCULE SU ÍNDICE DE MASA CORPORAL - IMC</h1>
     </header>
 
-    <div class="imagen-doctora">
-        <img src="./img/doctora.png" alt="fondo">
+    <div class="doctora">
+        <img src="./img/doctora.png">
     </div>
 
     <form class="formulario" id="formulario">
+
         <div class="datos">
             <div>
-                <label for="peso">PESO (kg)</label>
-                <input type="number" id="peso" step="any" required>
+                <label>PESO (kg)</label>
+                <input type="number" step="any" required id="peso">
             </div>
-
             <div>
-                <label for="estatura">ESTATURA (m)</label>
-                <input type="number" id="estatura" step="any" required>
+                <label>ESTATURA (m)</label>
+                <input type="number" step="any" required id="estatura">
             </div>
-        </div>
 
+        </div>
         <div class="resultado">
             <h5>RESULTADO IMC</h5>
             <h3 id="resultado">00.00</h3>
             <h5 id="estado">ESTADO</h5>
         </div>
-
-        <button class="boton" type="submit">Calcular IMC</button>
+        <input class="boton" type="submit" value="Calcular IMC">
     </form>
 
 
-    <footer class="pie-de-pagina">
-        <p>Created By Emelyn Espinal </p>
+    <footer class="pie">
+        <p>Created By Emelyn Espinal Santos</p>
     </footer>
 
     <script src="./js/script.js"></script>
-
 </body>
 
 </html>
