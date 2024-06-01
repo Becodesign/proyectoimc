@@ -166,7 +166,6 @@
 /* ==================== pie de página ==================== */
 .pie {
   background: var(--color-1);
-  background: linear-gradient(90deg, rgba(130, 228, 240, 1) 0%, rgba(245, 181, 239, 1) 25%, rgba(245, 211, 161, 1) 50%, rgba(235, 232, 163, 1) 75%, rgba(196, 227, 151, 1) 100%);
   padding: 1rem;
   text-align: center;
 }
