@@ -5,14 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EVA</title>
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./img/icono.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
     <header class="encabezado">
         <img src="./img/logo.png">
-        <h1>CALCULE SU ÍNDICE DE MASA CORPORAL - IMC</h1>
+        <h1>CALCULE SU ÍNDICE DE MASA CORPORAL <br><span>IMC</span></h1>
     </header>
 
     <div class="doctora">
@@ -37,7 +38,12 @@
             <h3 id="resultado">00.00</h3>
             <h5 id="estado">ESTADO</h5>
         </div>
-        <input class="boton" type="submit" value="Calcular IMC">
+        <input class="boton" type="submit" value="Calcular IMC" id="boton">
+        <a class="boton-saludable" href="./html/saludable.html" id="saludable">
+            Continuar
+            <i class='bx bx-right-arrow-alt bx-tada'></i>
+
+        </a>
     </form>
 
 

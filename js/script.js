@@ -21,4 +21,9 @@ formulario.addEventListener("submit", (event) => {
   } else if (IMC > 30) {
     estado.textContent = `OBESIDAD`;
   }
+
+  const btnsaludabe = document.getElementById("saludable");
+  const boton = document.getElementById("boton");
+  boton.style.setProperty("display", "none");
+  btnsaludabe.style.setProperty("display", "flex");
 });

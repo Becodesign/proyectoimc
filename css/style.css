@@ -2,9 +2,10 @@
 
 /* ==================== variables ==================== */
 :root {
-  --color-1: #1BBACC;
+  --color-1: #26c0d1;
   --color-2: #8b71c0;
   --color-3: #E5E7E8;
+  --color-4: #e8e3f8;
   --blanco: #f7f7f7;
   --negro: #433B82;
 }
@@ -26,19 +27,25 @@
 
 .encabezado {
   background: var(--color-1);
-  background: linear-gradient(90deg, rgba(27, 186, 204, 1) 0%, rgba(174, 176, 191, 1) 17%, rgba(213, 169, 184, 1) 36%, rgba(240, 188, 164, 1) 50%, rgba(253, 214, 155, 1) 62%, rgba(237, 234, 155, 1) 78%, rgba(204, 228, 168, 1) 100%);
   padding: 1rem;
   text-align: center;
+  background: linear-gradient(90deg, rgba(130, 228, 240, 1) 0%, rgba(245, 181, 239, 1) 25%, rgba(245, 211, 161, 1) 50%, rgba(235, 232, 163, 1) 75%, rgba(196, 227, 151, 1) 100%);
 }
 
 .encabezado img {
-  width: 5rem;
+  width: 4rem;
 }
 
 .encabezado h1 {
-  font-size: .9rem;
+  font-size: 1.1rem;
   color: var(--negro);
   font-weight: 500;
+  line-height: 1.7rem;
+}
+
+.encabezado h1 span {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 
@@ -130,10 +137,36 @@
   transform: scale(1.02);
 }
 
+.formulario .boton-saludable {
+  font-size: 1.1rem;
+  background: var(--color-2);
+  width: 100%;
+  border-radius: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--blanco);
+  margin-top: 1.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.1rem;
+  display: none;
+}
+
+.formulario .boton-saludable:hover {
+  transform: scale(1.02);
+}
+
+.formulario .boton-saludable i {
+  font-size: 2rem;
+}
+
 
 /* ==================== pie de página ==================== */
 .pie {
   background: var(--color-1);
+  background: linear-gradient(90deg, rgba(130, 228, 240, 1) 0%, rgba(245, 181, 239, 1) 25%, rgba(245, 211, 161, 1) 50%, rgba(235, 232, 163, 1) 75%, rgba(196, 227, 151, 1) 100%);
   padding: 1rem;
   text-align: center;
 }
@@ -152,5 +185,6 @@
     width: 30%;
     margin: 0 auto;
     background: var(--color-2);
+
   }
 }
