@@ -187,3 +187,12 @@
 
   }
 }
+
+#practicando {
+  display: flex;
+  width: 1rem;
+  height: 1rem;
+  background: transparent;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
