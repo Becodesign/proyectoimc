@@ -1,0 +1,422 @@
+/* ==================== GOOGLE FONTS ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400&display=swap');
+
+/* ==================== VARIABLES ==================== */
+:root {
+    --color-1: #FF6600;
+    --color-2: #F99755;
+    --color-3: #05AF33;
+    --plomo: #202020;
+    --negro: #000000;
+    --blanco: #f7f7f7;
+    --font: 1.1rem;
+    --font-title: 4.5rem;
+    --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* ==================== BASE ==================== */
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    transition: all .25s linear;
+}
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--negro);
+}
+
+::selection {
+    color: var(--blanco);
+    background-color: var(--color-1);
+}
+
+img {
+    max-width: 100%;
+    height: 100%;
+}
+
+section {
+    width: 100%;
+    padding: 5.5rem 9% 1rem;
+}
+
+/* ==================== REUSABLE ==================== */
+
+.btn {
+    display: inline-flex;
+    background: linear-gradient(90deg, var(--color-2), var(--color-1));
+    /* background-position: 100% 0; */
+    background-size: 100% 100%;
+    color: var(--blanco);
+    font-size: var(--font);
+    padding: .7rem 3rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    /* ojo para que no se ajuste texto  */
+    white-space: nowrap;
+    transition: all 0.8s, color 0.3s 0.3s !important;
+
+}
+
+.btn:hover {
+    box-shadow: 300px 0 0 0 rgba(255, 255, 255, 0.7) inset, -300px 0 0 0 rgba(255, 255, 255, 0.7) inset;
+    color: var(--negro);
+}
+
+.btn:active {
+    transform: scale(.8) !important;
+}
+
+/* ==================== SCROLLBAR ==================== */
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: var(--color-2);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: var(--color-1);
+}
+
+html::-webkit-scrollbar-button {
+    background: var(--color-1);
+}
+
+/* ==================== HEADER ==================== */
+.header {
+    position: fixed;
+    background: hsla(0, 0%, 0%, 0.4);
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 9%;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+
+/* =====  header efecto con css puro */
+/* #header {
+    animation: header linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+}
+
+@keyframes header {
+    to {
+        backdrop-filter: blur(10px);
+        height: 6rem;
+    }
+} */
+
+.nav {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav__logo-img {
+    width: 7rem;
+    /* para que no se utoredusca la imagen del logo  */
+    max-width: fit-content;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav__link {
+    position: relative;
+    font-size: var(--font);
+    color: var(--blanco);
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav__link:hover {
+    background: hsla(0, 0%, 97%, 0.25);
+
+    i {
+        rotate: 90deg;
+    }
+}
+
+.nav__item {
+    i {
+        font-size: 1.5rem;
+    }
+}
+
+.nav__btns {
+    display: flex;
+    align-items: center;
+}
+
+#hamburger {
+    font-size: 2.5rem;
+    color: var(--blanco);
+    cursor: pointer;
+    display: none;
+}
+
+/* ==================== HOME ==================== */
+.home {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../img/fondo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 8rem;
+}
+
+.home__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.home__title {
+    font-size: var(--font-title);
+    color: var(--blanco);
+    line-height: 4.7rem;
+}
+
+.home__description {
+    font-size: calc(var(--font) + .2rem);
+    color: var(--blanco);
+    font-weight: 300;
+    margin-top: 3rem;
+    line-height: 1.7rem;
+}
+
+.home__data {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 40rem;
+    width: 100%;
+}
+
+.home__card {
+    margin-top: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    height: 100%;
+
+    div {
+        background: var(--plomo);
+        height: 15rem;
+        flex: 1 1 20rem;
+        border-radius: .4rem;
+        color: var(--blanco);
+        padding: 2rem;
+        background: hsla(0, 0%, 0%, 0.6);
+        backdrop-filter: blur(15px);
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        color: var(--blanco);
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: var(--blanco);
+        font-size: 1rem;
+        line-height: 1.6rem;
+        font-weight: 300;
+    }
+
+}
+
+
+/* ==================== CLIMATE ==================== */
+.climate {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.climate__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+
+    img {
+        width: 5rem;
+    }
+}
+
+.climate__title {
+    position: relative;
+
+    p {
+        color: var(--blanco);
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        border: 1px solid var(--color-1);
+
+    }
+
+    div {
+        position: absolute;
+        width: 1rem;
+        height: 1rem;
+        border: 1px solid var(--color-1);
+        background: var(--negro);
+    }
+
+    .square1 {
+        top: -.5rem;
+        left: -.5rem;
+    }
+
+    .square2 {
+        top: -.5rem;
+        right: -.5rem;
+    }
+
+    .square3 {
+        bottom: -.5rem;
+        left: -.5rem;
+    }
+
+    .square4 {
+        bottom: -.5rem;
+        right: -.5rem;
+    }
+
+}
+
+/* ====================  SCROLL UP ====================  */
+.scrollup {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    background: var(--color-1);
+    color: var(--blanco);
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: .3rem;
+    text-align: center;
+    line-height: 2.7rem;
+    font-size: 1.5rem;
+    visibility: hidden;
+    transform: scale(0);
+}
+
+/* ===== js */
+.scrollup.mostrar {
+    visibility: visible;
+    transform: scale(1);
+}
+
+
+/* ==================== MEDIA QUERY ==================== */
+
+@media screen and (max-width:991px) {}
+
+@media screen and (max-width:768px) {
+    :root {
+        --font: 1.1rem;
+        --font-title: 2.5rem;
+    }
+
+    .home__title {
+        text-align: center;
+        line-height: 2.5rem;
+    }
+
+    .home__description {
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+
+    .home__card {
+        p {
+            font-size: .9rem;
+        }
+
+        h5 {
+            font-size: 1.4rem;
+        }
+    }
+
+    .btn {
+        display: none;
+    }
+
+    #hamburger {
+        display: initial;
+        z-index: 1001;
+    }
+
+    .nav__menu {
+        position: absolute;
+        padding: 1rem 9% 1rem;
+        top: 100%;
+        left: 0;
+        right: 0;
+        transform: translateX(-200%);
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .nav__list {
+        flex-direction: column;
+        align-items: flex-start;
+        background: var(--color-1);
+        border-radius: .4rem;
+        padding: 1rem;
+    }
+
+    .nav__item a {
+        color: var(--negro);
+    }
+
+    /* =====  js */
+    .nav__menu.mostrar {
+        transform: translateY(0%);
+    }
+
+    .nav__link.active-link::before {
+        display: none;
+    }
+
+    /* ===== para js */
+    #hamburger.bx-x {
+        transform: rotate(90deg);
+        font-size: 2.9rem;
+    }
+
+}
+
+@media screen and (max-width:450) {}
