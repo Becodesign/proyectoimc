@@ -5,9 +5,9 @@
 :root {
     --color-1: #FF6600;
     --color-2: #F99755;
-    --color-3: #05AF33;
-    --plomo: #202020;
-    --negro: #000000;
+    --color-3: #23B555;
+    --plomo: #2c2525;
+    --negro: #030303;
     --blanco: #f7f7f7;
     --font: 1.1rem;
     --font-title: 4.5rem;
@@ -32,7 +32,7 @@
     border: none;
     text-decoration: none;
     list-style: none;
-    transition: all .25s linear;
+    transition: all .3s linear;
 }
 
 html {
@@ -60,7 +60,6 @@ section {
 }
 
 /* ==================== REUSABLE ==================== */
-
 .btn {
     display: inline-flex;
     background: linear-gradient(90deg, var(--color-2), var(--color-1));
@@ -92,7 +91,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-    background: var(--color-2);
+    background: var(--plomo);
 }
 
 html::-webkit-scrollbar-thumb {
@@ -114,7 +113,6 @@ html::-webkit-scrollbar-button {
     z-index: 1000;
     backdrop-filter: blur(10px);
 }
-
 
 /* =====  header efecto con css puro */
 /* #header {
@@ -138,7 +136,7 @@ html::-webkit-scrollbar-button {
 }
 
 .nav__logo-img {
-    width: 7rem;
+    width: 8rem;
     /* para que no se utoredusca la imagen del logo  */
     max-width: fit-content;
 }
@@ -187,6 +185,12 @@ html::-webkit-scrollbar-button {
 }
 
 /* ==================== HOME ==================== */
+#mobile {
+    width: 100%;
+    margin-top: 4rem;
+    display: none;
+}
+
 .home {
     background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)), url("../img/fondo.png");
     background-repeat: no-repeat;
@@ -200,6 +204,19 @@ html::-webkit-scrollbar-button {
     justify-content: space-between;
 }
 
+.home__data {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    max-width: 40rem;
+    width: 100%;
+}
+
+.home__data .btn {
+    margin-top: 1rem;
+    display: none;
+}
+
 .home__title {
     font-size: var(--font-title);
     color: var(--blanco);
@@ -210,16 +227,8 @@ html::-webkit-scrollbar-button {
     font-size: calc(var(--font) + .2rem);
     color: var(--blanco);
     font-weight: 300;
-    margin-top: 3rem;
+    margin-top: 2rem;
     line-height: 1.7rem;
-}
-
-.home__data {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    max-width: 40rem;
-    width: 100%;
 }
 
 .home__card {
@@ -228,33 +237,30 @@ html::-webkit-scrollbar-button {
     flex-wrap: wrap;
     gap: 2rem;
     height: 100%;
-
-    div {
-        background: var(--plomo);
-        height: 15rem;
-        flex: 1 1 20rem;
-        border-radius: .4rem;
-        color: var(--blanco);
-        padding: 2rem;
-        background: hsla(0, 0%, 0%, 0.6);
-        backdrop-filter: blur(15px);
-    }
-
-    h5 {
-        font-size: 1.5rem;
-        color: var(--blanco);
-        margin-bottom: 1rem;
-    }
-
-    p {
-        color: var(--blanco);
-        font-size: 1rem;
-        line-height: 1.6rem;
-        font-weight: 300;
-    }
-
 }
 
+.home__card .card {
+    height: 15rem;
+    flex: 1 1 20rem;
+    border-radius: .4rem;
+    color: var(--blanco);
+    padding: 2rem;
+    background: hsla(0, 0%, 0%, 0.6);
+    backdrop-filter: blur(15px);
+}
+
+.home__card h5 {
+    font-size: 1.5rem;
+    color: var(--blanco);
+    margin-bottom: 1rem;
+}
+
+.home__card p {
+    color: var(--blanco);
+    font-size: 1rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+}
 
 /* ==================== CLIMATE ==================== */
 .climate {
@@ -332,9 +338,14 @@ html::-webkit-scrollbar-button {
     font-size: 1.5rem;
     visibility: hidden;
     transform: scale(0);
+    box-shadow: var(--shadow);
 }
 
-/* ===== js */
+.scrollup:hover {
+    background: var(--color-3);
+}
+
+/* ===== for js */
 .scrollup.mostrar {
     visibility: visible;
     transform: scale(1);
@@ -351,12 +362,18 @@ html::-webkit-scrollbar-button {
         --font-title: 2.5rem;
     }
 
+    .home__data {
+        max-width: 100%;
+        align-items: center;
+    }
+
     .home__title {
         text-align: center;
         line-height: 2.5rem;
     }
 
     .home__description {
+        text-align: center;
         font-size: 1rem;
         margin-top: 2rem;
     }
@@ -373,6 +390,10 @@ html::-webkit-scrollbar-button {
 
     .btn {
         display: none;
+    }
+
+    .home__data .btn {
+        display: initial;
     }
 
     #hamburger {
@@ -393,9 +414,10 @@ html::-webkit-scrollbar-button {
     .nav__list {
         flex-direction: column;
         align-items: flex-start;
-        background: var(--color-1);
+        background: var(--color-2);
         border-radius: .4rem;
         padding: 1rem;
+        box-shadow: var(--shadow);
     }
 
     .nav__item a {
@@ -419,4 +441,20 @@ html::-webkit-scrollbar-button {
 
 }
 
-@media screen and (max-width:450) {}
+@media screen and (max-width:450px) {
+
+    #mobile {
+        display: initial;
+    }
+
+    .home {
+        background: var(--negro);
+        padding-top: .5rem;
+    }
+
+    .home__card .card {
+
+        background: hsla(0, 0%, 97%, 0.12);
+
+    }
+}

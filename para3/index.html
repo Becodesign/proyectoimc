@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8" />
@@ -33,7 +33,8 @@
                         <a class="nav__link" href="#help">Help</a>
                     </li>
                     <li class="nav__item">
-                        <a class="nav__link" href="https://www.youtube.com/@Becod" target="_blank">Contact</a>
+                        <a class="nav__link" href="https://www.youtube.com/@Becod/videos" target="_blank"
+                            rel="noopener noreferrer">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -48,44 +49,53 @@
     </header>
 
     <!-- ==================== HOME ==================== -->
-    <section class="home" id="home">
-        <div class="home__container">
-            <div class="home__data" data-aos="fade-right" data-aos-duration="1000">
-                <h1 class="home__title">Invite and earn on Orange flex</h1>
-                <p class="home__description">
-                    The more friends on Orange Flex, the better! You can exchange data
-                    and promo codes from the Flex Club. Plus you get PLN 100 to
-                    celebrate together.
-                </p>
+    <!-- este div se puso SÓLO para incliir ina imagen mobile arreglarrrr -->
+    <div>
+        <img src="./img/mobile.webp" id="mobile" data-aos="fade-down" data-aos-duration="1000">
+
+        <section class="home" id="home">
+            <div class="home__container">
+                <div class="home__data" data-aos="fade-right" data-aos-duration="1000">
+                    <h1 class="home__title">Invite and earn on Orange flex</h1>
+                    <p class="home__description">
+                        The more friends on Orange Flex, the better! You can exchange data
+                        and promo codes from the Flex Club. Plus you get PLN 100 to
+                        celebrate together.
+                    </p>
+                    <a class="btn" href="https://buymeacoffee.com/becod/extras" target="_blank"
+                        rel="noopener noreferrer" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="1000">
+                        Download Flex
+                    </a>
+                </div>
+                <div class="home__card">
+                    <div class="card" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                        <h5>Share your code</h5>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
+                            dolorum accusamus molestias perferendis iure nam accusantium quos
+                            dolor beatae quis?
+                        </p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+                        <h5>One, two, and transfer</h5>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
+                            dolorum accusamus molestias perferendis iure nam accusantium quos
+                            dolor beatae quis?
+                        </p>
+                    </div>
+                    <div class="card" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
+                        <h5>Plus 1000 GB!</h5>
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
+                            dolorum accusamus molestias perferendis iure nam accusantium quos
+                            dolor beatae quis?
+                        </p>
+                    </div>
+                </div>
             </div>
-            <div class="home__card">
-                <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
-                    <h5>Share your code</h5>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
-                        dolorum accusamus molestias perferendis iure nam accusantium quos
-                        dolor beatae quis?
-                    </p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-                    <h5>One, two, and transfer</h5>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
-                        dolorum accusamus molestias perferendis iure nam accusantium quos
-                        dolor beatae quis?
-                    </p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
-                    <h5>Plus 1000 GB!</h5>
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum
-                        dolorum accusamus molestias perferendis iure nam accusantium quos
-                        dolor beatae quis?
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- ==================== CLIMATE ==================== -->
     <section class="climate" id="climate">
@@ -102,12 +112,14 @@
     </section>
 
     <!-- ==================== SCROLL UP ====================   -->
-    <a href="#home" class="scrollup" id="scrollup"><i class="bx bxs-chevron-up"></i></a>
+    <a href="#" class="scrollup" id="scrollup"><i class="bx bxs-chevron-up"></i></a>
 
     <!-- ==================== AOS ==================== -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true,
+        });
     </script>
 
     <!-- ==================== JAVASCRIPT ==================== -->
