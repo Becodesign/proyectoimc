@@ -3,12 +3,13 @@
 
 /* ==================== VARIABLES ==================== */
 :root {
-    --color-1: #FF6600;
+    --color-1: #f3680b;
     --color-2: #F99755;
     --color-3: #23B555;
-    --plomo: #2c2525;
-    --negro: #030303;
-    --blanco: #f7f7f7;
+    --color-4: #f98a40;
+    --gray: #2c2525;
+    --black: #030303;
+    --white: #f7f7f7;
     --font: 1.1rem;
     --font-title: 4.5rem;
     --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -41,11 +42,11 @@ html {
 }
 
 body {
-    background: var(--negro);
+    background: var(--black);
 }
 
 ::selection {
-    color: var(--blanco);
+    color: var(--white);
     background-color: var(--color-1);
 }
 
@@ -65,7 +66,7 @@ section {
     background: linear-gradient(90deg, var(--color-2), var(--color-1));
     /* background-position: 100% 0; */
     background-size: 100% 100%;
-    color: var(--blanco);
+    color: var(--white);
     font-size: var(--font);
     padding: .7rem 3rem;
     border-radius: .3rem;
@@ -78,7 +79,7 @@ section {
 
 .btn:hover {
     box-shadow: 300px 0 0 0 rgba(255, 255, 255, 0.7) inset, -300px 0 0 0 rgba(255, 255, 255, 0.7) inset;
-    color: var(--negro);
+    color: var(--black);
 }
 
 .btn:active {
@@ -91,7 +92,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-    background: var(--plomo);
+    background: var(--gray);
 }
 
 html::-webkit-scrollbar-thumb {
@@ -150,7 +151,7 @@ html::-webkit-scrollbar-button {
 .nav__link {
     position: relative;
     font-size: var(--font);
-    color: var(--blanco);
+    color: var(--white);
     padding: .5rem 1rem;
     border-radius: 1rem;
     display: flex;
@@ -179,7 +180,7 @@ html::-webkit-scrollbar-button {
 
 #hamburger {
     font-size: 2.5rem;
-    color: var(--blanco);
+    color: var(--white);
     cursor: pointer;
     display: none;
 }
@@ -219,13 +220,13 @@ html::-webkit-scrollbar-button {
 
 .home__title {
     font-size: var(--font-title);
-    color: var(--blanco);
+    color: var(--white);
     line-height: 4.7rem;
 }
 
 .home__description {
     font-size: calc(var(--font) + .2rem);
-    color: var(--blanco);
+    color: var(--white);
     font-weight: 300;
     margin-top: 2rem;
     line-height: 1.7rem;
@@ -243,7 +244,7 @@ html::-webkit-scrollbar-button {
     height: 15rem;
     flex: 1 1 20rem;
     border-radius: .4rem;
-    color: var(--blanco);
+    color: var(--white);
     padding: 2rem;
     background: hsla(0, 0%, 0%, 0.6);
     backdrop-filter: blur(15px);
@@ -251,12 +252,12 @@ html::-webkit-scrollbar-button {
 
 .home__card h5 {
     font-size: 1.5rem;
-    color: var(--blanco);
+    color: var(--white);
     margin-bottom: 1rem;
 }
 
 .home__card p {
-    color: var(--blanco);
+    color: var(--white);
     font-size: 1rem;
     line-height: 1.6rem;
     font-weight: 300;
@@ -286,7 +287,7 @@ html::-webkit-scrollbar-button {
     position: relative;
 
     p {
-        color: var(--blanco);
+        color: var(--white);
         font-size: 2rem;
         padding: 1rem 2rem;
         border: 1px solid var(--color-1);
@@ -298,7 +299,7 @@ html::-webkit-scrollbar-button {
         width: 1rem;
         height: 1rem;
         border: 1px solid var(--color-1);
-        background: var(--negro);
+        background: var(--black);
     }
 
     .square1 {
@@ -329,7 +330,7 @@ html::-webkit-scrollbar-button {
     right: 2rem;
     bottom: 2rem;
     background: var(--color-1);
-    color: var(--blanco);
+    color: var(--white);
     width: 2.5rem;
     height: 2.5rem;
     border-radius: .3rem;
@@ -414,14 +415,14 @@ html::-webkit-scrollbar-button {
     .nav__list {
         flex-direction: column;
         align-items: flex-start;
-        background: var(--color-2);
+        background: var(--color-4);
         border-radius: .4rem;
         padding: 1rem;
         box-shadow: var(--shadow);
     }
 
     .nav__item a {
-        color: var(--negro);
+        color: var(--black);
     }
 
     /* =====  js */
@@ -448,7 +449,7 @@ html::-webkit-scrollbar-button {
     }
 
     .home {
-        background: var(--negro);
+        background: var(--black);
         padding-top: .5rem;
     }
 

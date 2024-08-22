@@ -13,3 +13,7 @@ boton.addEventListener("click", (e) => {
   document.getElementById("nav-menu").classList.toggle("mostrar");
   document.getElementById("hamburger").classList.toggle("bx-x");
 });
+document.addEventListener("scroll", (e) => {
+  document.getElementById("nav-menu").classList.remove("mostrar");
+  document.getElementById("hamburger").classList.remove("bx-x");
+});
