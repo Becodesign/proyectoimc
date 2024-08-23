@@ -134,7 +134,7 @@ img {
 }
 
 .home__blob-1 {
-  width: 150px;
+  width: 160px;
   height: 180px;
   border-radius: 38% 62% 66% 34%/60% 41% 59% 40%;
   top: -2rem;
@@ -143,14 +143,14 @@ img {
 }
 
 .home__img-1 {
-  width: 110px;
+  width: 112px;
   top: 0rem;
   right: 1rem;
 }
 
 .home__blob-2 {
   width: 200px;
-  height: 195px;
+  height: 200px;
   border-radius: 59% 41% 19% 81%/34% 72% 28% 66%;
   top: -8rem;
   right: -8.5rem;
@@ -158,9 +158,9 @@ img {
 }
 
 .home__img-2 {
-  width: 150px;
-  top: 1.6rem;
-  left: 1rem;
+  width: 160px;
+  top: 1.2rem;
+  left: -1rem;
 }
 
 .home__blob-3 {
@@ -188,7 +188,7 @@ img {
 }
 
 .home__img-4 {
-  width: 200px;
+  width: 215px;
   left: -1rem;
   bottom: 1rem;
 }
@@ -347,7 +347,7 @@ img {
   }
 
   .home__img-1 {
-    width: 150px;
+    width: 170px;
     top: -2rem;
     right: 3rem;
   }
@@ -360,7 +360,7 @@ img {
   }
 
   .home__img-2 {
-    width: 190px;
+    width: 220px;
     top: 2rem;
     left: -1rem;
   }
@@ -373,13 +373,13 @@ img {
   }
 
   .home__img-3 {
-    width: 280px;
+    width: 260px;
     top: 1rem;
     right: 5rem;
   }
 
   .home__blob-4 {
-    width: 400px;
+    width: 420px;
     height: 350px;
     right: -5rem;
     bottom: -3rem;
@@ -393,7 +393,7 @@ img {
   }
 
   .home__img-5 {
-    width: 6rem;
+    width: 5.5rem;
     left: 0;
     right: 0;
     top: 2rem;
