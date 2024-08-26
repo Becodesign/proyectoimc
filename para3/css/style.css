@@ -64,7 +64,6 @@ section {
 .btn {
     display: inline-flex;
     background: linear-gradient(90deg, var(--color-2), var(--color-1));
-    /* background-position: 100% 0; */
     background-size: 100% 100%;
     color: var(--white);
     font-size: var(--font);
@@ -382,7 +381,7 @@ html::-webkit-scrollbar-button {
     .home__description {
         text-align: center;
         font-size: 1rem;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
     }
 
     .home__card {
@@ -410,7 +409,7 @@ html::-webkit-scrollbar-button {
 
     .nav__menu {
         position: absolute;
-        padding: 1rem 9% 1rem;
+        padding: 1rem;
         top: 100%;
         left: 0;
         right: 0;
@@ -431,7 +430,7 @@ html::-webkit-scrollbar-button {
         color: var(--black);
     }
 
-    /* ===== for  js */
+    /* ===== for js */
     .nav__menu.mostrar {
         transform: translateY(0%);
     }
@@ -450,6 +449,13 @@ html::-webkit-scrollbar-button {
 
 @media screen and (max-width:450px) {
 
+    section,
+    .header,
+    .footer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
     #mobile {
         display: initial;
     }
@@ -460,12 +466,7 @@ html::-webkit-scrollbar-button {
     }
 
     .home__card .card {
-
         background: hsla(0, 0%, 97%, 0.12);
 
     }
-}
-
-.nose {
-    background: orange;
 }
