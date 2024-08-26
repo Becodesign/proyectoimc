@@ -9,7 +9,7 @@
     --color-4: #f98a40;
     --gray: #2c2525;
     --black: #030303;
-    --white: #f7f7f7;
+    --white: #f1f1f1;
     --font: 1.1rem;
     --font-title: 4.5rem;
     --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -71,7 +71,6 @@ section {
     padding: .7rem 3rem;
     border-radius: .3rem;
     cursor: pointer;
-    /* ojo para que no se ajuste texto  */
     white-space: nowrap;
     transition: all 0.8s, color 0.3s 0.3s !important;
 
@@ -115,20 +114,6 @@ html::-webkit-scrollbar-button {
     backdrop-filter: blur(10px);
 }
 
-/* =====  header efecto con css puro */
-/* #header {
-    animation: header linear both;
-    animation-timeline: scroll();
-    animation-range: 0 500px;
-}
-
-@keyframes header {
-    to {
-        backdrop-filter: blur(10px);
-        height: 6rem;
-    }
-} */
-
 .nav {
     height: 5rem;
     display: flex;
@@ -138,7 +123,6 @@ html::-webkit-scrollbar-button {
 
 .nav__logo-img {
     width: 8rem;
-    /* para que no se utoredusca la imagen del logo  */
     max-width: fit-content;
 }
 
@@ -188,7 +172,7 @@ html::-webkit-scrollbar-button {
 /* ==================== HOME ==================== */
 #mobile {
     width: 100%;
-    margin-top: 4rem;
+    margin-top: 3.5rem;
     display: none;
 }
 
@@ -254,6 +238,14 @@ html::-webkit-scrollbar-button {
     font-size: 1.5rem;
     color: var(--white);
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.home__card h5 img {
+    width: 1.6rem;
+    height: auto;
 }
 
 .home__card p {
@@ -322,6 +314,20 @@ html::-webkit-scrollbar-button {
         right: -.5rem;
     }
 
+}
+
+/* ==================== FOOTER ==================== */
+
+.footer {
+    background: var(--black);
+    padding: 2rem 9%;
+    border-top: solid .1rem var(--gray);
+
+    p {
+        text-align: center;
+        font-size: calc(var(--font) - .1rem);
+        color: var(--white);
+    }
 }
 
 /* ====================  SCROLL UP ====================  */
@@ -425,7 +431,7 @@ html::-webkit-scrollbar-button {
         color: var(--black);
     }
 
-    /* =====  js */
+    /* ===== for  js */
     .nav__menu.mostrar {
         transform: translateY(0%);
     }
@@ -434,7 +440,7 @@ html::-webkit-scrollbar-button {
         display: none;
     }
 
-    /* ===== para js */
+    /* ===== for js */
     #hamburger.bx-x {
         transform: rotate(90deg);
         font-size: 2.9rem;
@@ -458,4 +464,8 @@ html::-webkit-scrollbar-button {
         background: hsla(0, 0%, 97%, 0.12);
 
     }
+}
+
+.nose {
+    background: orange;
 }
