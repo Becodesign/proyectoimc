@@ -11,7 +11,7 @@
     --black-2: #262626;
 }
 
-/* ==================== base ==================== */
+/* ==================== BASE ==================== */
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -60,7 +60,7 @@ html::-webkit-scrollbar-thumb {
 
 section {
     min-height: 100vh;
-    padding: 1rem 7%;
+    padding: 3rem 7%;
 }
 
 .btn {
@@ -89,7 +89,7 @@ section {
     color: var(--orange-1);
 }
 
-/* ==================== header ==================== */
+/* ==================== HEADER ==================== */
 header {
     position: fixed;
     top: 0;
@@ -153,7 +153,7 @@ header #menu-bar {
     display: none;
 }
 
-/* ==================== home ==================== */
+/* ==================== HOMME ==================== */
 .home {
     display: flex;
     align-items: center;
@@ -233,22 +233,25 @@ header #menu-bar {
 
 
 
-/* ==================== about ==================== */
+/* ==================== ABOUT ==================== */
 
 .about {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 1rem;
+    min-height: initial;
 }
 
-
 .about .image {
-    flex: 1 1 40rem;
+    flex: 1 1 50rem;
     height: 50rem;
-    background: url(../images/about-frame-img.png), url(../images/about-img.jpg) no-repeat;
-    background-size: cover;
+    /* las imagenes deben ser del mismo tamaño  */
+    background: url(../images/about-frame-img.png), url(../images/about-img.jpg);
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     background-blend-mode: screen;
 }
 
@@ -260,6 +263,8 @@ header #menu-bar {
 .about .content h3 {
     font-size: 4rem;
     color: #333;
+    color: var(--orange-1);
+    text-transform: initial;
 }
 
 .about .content p {
@@ -268,25 +273,32 @@ header #menu-bar {
     padding: 1rem 0;
 }
 
-/* ==================== menu ==================== */
-
+/* ==================== MENU ==================== */
 .menu .list {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     list-style: none;
+    gap: 2rem;
     padding: 1rem 0;
     margin: 2rem 0;
-    border-top: .3rem dashed rgba(0, 0, 0, .2);
-    border-bottom: .3rem dashed rgba(0, 0, 0, .2);
+    /* border-top: .3rem dashed rgba(0, 0, 0, .2); */
+    /* border-bottom: .3rem dashed rgba(0, 0, 0, .2); */
+    background: var(--orange-3);
 }
 
 .menu .list .btn {
-    margin: 1rem;
     background: transparent;
     border: 2px solid var(--orange-2);
     color: var(--black-2);
+    text-align: center;
+    width: 20rem;
+
+    @media (width < 500px) {
+        width: 15rem;
+
+    }
 }
 
 .menu .list .btn.active,
@@ -300,14 +312,16 @@ header #menu-bar {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .menu .row .image {
-    margin: 2rem;
     padding: 2rem;
     flex: 1 1 40rem;
     border-radius: 1rem;
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .menu .row .image img {
@@ -343,7 +357,7 @@ header #menu-bar {
     color: #666;
 }
 
-/* ==================== popular ==================== */
+/* ==================== POPULAR ==================== */
 .popular {
     background: linear-gradient(rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)), url(../images/popular-bg.jpg) no-repeat;
     background-size: cover;
@@ -352,20 +366,27 @@ header #menu-bar {
 }
 
 .popular .box-container {
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 2rem;
+
 }
 
 .popular .box-container .box {
+    flex: 1 1 auto;
     background: #fff;
-    width: 35rem;
     padding: 2rem;
-    margin: 2rem;
     border-radius: 1rem;
     box-shadow: 0 .3rem .5rem rgba(0, 0, 0, .2);
     text-align: center;
+    overflow: hidden;
+}
+
+.popular .box-container .box:hover img {
+    transform: translateY(-1rem) scale(1.2);
 }
 
 .popular .box-container .box img {
@@ -391,23 +412,18 @@ header #menu-bar {
     font-size: 2.5rem;
 }
 
-.popular .box-container .box:hover {
-    transform: scale(1.02);
-    box-shadow: 0 1rem 1rem rgba(0, 0, 0, .2);
-}
-
-/* ==================== gallery ==================== */
+/* ==================== GALLERY  ==================== */
 .gallery .box-container {
+    margin-top: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .gallery .box-container .box {
-    height: 20rem;
-    width: 30rem;
-    margin: 2rem;
+    flex: 1 1 40rem;
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -451,12 +467,13 @@ header #menu-bar {
     top: 0;
 }
 
-/* ==================== order ==================== */
+/* ==================== ORDER ==================== */
 
 .order {
     background: url(../images/contact-bg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    min-height: initial;
 
 }
 
@@ -504,29 +521,27 @@ header #menu-bar {
     height: 15rem;
 }
 
-/* ==================== footer ==================== */
+/* ==================== FOOTER ==================== */
 
 .footer {
     background: #282727;
-    padding: 1rem 7%;
-}
-
-.footer .box-container {
-    display: flex;
-    flex-wrap: wrap;
+    padding: 3rem 7%;
 }
 
 .footer .box-container .box {
-    flex: 1 1 25rem;
-    margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5rem;
+    padding: 1rem;
+
+    @media (width < 768px) {
+        gap: 2rem;
+
+    }
 }
 
-.footer .box-container .box h3 {
-    font-size: 2.5rem;
-    color: #fff;
-    padding: 1rem 0;
-    font-weight: normal;
-}
 
 .footer .box-container .box p {
     font-size: 1.7rem;
@@ -534,16 +549,6 @@ header #menu-bar {
     padding: 1rem 0;
 }
 
-.footer .box-container .box a {
-    font-size: 1.7rem;
-    color: #eee;
-    padding: 1rem 0;
-    display: block;
-}
-
-.footer .box-container .box a:hover {
-    color: var(--orange-1);
-}
 
 .footer .box-container .box p i {
     padding-right: .5rem;
@@ -551,13 +556,12 @@ header #menu-bar {
 }
 
 .footer .credit {
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-align: center;
-    border-top: .2rem solid rgba(255, 255, 255, .7);
+    border-top: .2rem solid rgba(255, 255, 255, .1);
     padding: 2rem 1rem;
     font-weight: normal;
-    letter-spacing: .1rem;
-    color: #fff;
+    color: #eee;
 }
 
 .footer .credit a {
@@ -565,7 +569,7 @@ header #menu-bar {
 }
 
 
-/* ==================== scrollup ====================  */
+/* ==================== SCROLLUP ====================  */
 .scrollup {
     position: fixed;
     right: 4rem;
@@ -597,7 +601,7 @@ header #menu-bar {
 
 
 
-/* ====================  media queries ==================== */
+/* ==================== MEDIA QUERIES ==================== */
 
 @media (max-width:991px) {
     html {
@@ -700,7 +704,7 @@ header #menu-bar {
 
 @media (max-width:500px) {
     html {
-        font-size: 50%;
+        font-size: 52%;
     }
 
     section {
@@ -712,8 +716,13 @@ header #menu-bar {
 
         .btn-2,
         .btn-1 {
-            width: 100%;
+            width: 90%;
         }
+    }
+
+    .about .image {
+        height: 30rem;
+
     }
 
 }
