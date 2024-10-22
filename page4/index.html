@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Halloween Website Design </title>
+    <link rel="shortcut icon" href="./assets/images/icon.ico" type="image/x-icon">
+    <!-- ==================== BOX ICONS ==================== -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <!-- ==================== AOS  ==================== -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--=============== ATROPOS CSS ===============-->
+    <link rel="stylesheet" href="./assets/css/atropos.min.css">
+    <!-- ==================== CSS  ==================== -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="header" id="header">
+        <nav class="nav">
+            <a href="index.html" class="nav__logo"><img src="./assets/images/logo.png" alt="logo"
+                    class="nav__logo-img"></a>
+
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="#">Home</a></li>
+                    <li><a class="nav__link" href="#">Tickets</a></li>
+                    <li><a class="nav__link" href="#">Event</a></li>
+                    <li><a class="nav__link" href="#">Gallery</a></li>
+                    <li><a class="nav__link" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="nav__btns">
+                <a href="#" class="btn">Log in</a>
+                <i class='bx bx-menu' id="hamburger"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ==================== HOME ==================== -->
+    <section class="home" id="inicio">
+        <img src="./assets/images/detalle.png" class="home__detalle-1" alt="detalle">
+        <img src="./assets/images/detalle.png" class="home__detalle-2" alt="detalle">
+        <div class="home__container">
+            <div class="home__data" data-aos="fade-right">
+                <h1 class="home__title">Beware of ghosts be careful</h1>
+                <h6 class="home__trick">Ready For Trick Or Treat</h6>
+                <p class="home__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sequi
+                    fuga cumque aliquid quas qui esse, vitae enim ut dolores?
+                </p>
+                <div class="home__btns">
+                    <a href="#" class="btn">Send Pumpkins</a>
+                </div>
+            </div>
+
+            <div class="home__img" data-aos="fade-left" data-aos-duration="2000">
+                <!-- ========== ATROPOS -->
+                <div class="atropos my-atropos">
+                    <div class="atropos-scale">
+                        <div class="atropos-rotate">
+                            <div class="atropos-inner">
+                                <img src="./assets/images/imagen-1.png" class="home__img-1" data-atropos-offset="10"
+                                    alt="imagen1">
+                                <img src="./assets/images/imagen-2.png" class="home__img-2" data-atropos-offset="10"
+                                    alt="imagen2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!--=============== ATROPOS JS ===============-->
+    <script src="./assets/js/atropos.min.js"></script>
+    <!-- ==================== AOS  ==================== -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
