@@ -7,7 +7,7 @@
 :root {
     --color-1: #d52c2f;
     --color-2: #f9c951;
-    --color-3: #d511be;
+    --color-3: #b50043;
     --negro: #1b334c;
     --blanco: #f1f1f1;
     --font: 1.1rem;
@@ -59,7 +59,11 @@ header {
 }
 
 .logo img {
-    height: 3.5rem;
+    width: 9rem;
+
+    @media (width<768px) {
+        width: 7rem;
+    }
 }
 
 nav {
@@ -123,6 +127,7 @@ nav a.active {
 
     &:hover {
         background: var(--color-3);
+        border: solid 2px var(--color-3);
     }
 }
 
@@ -146,6 +151,11 @@ nav a.active {
     background-image: url("../img/fondo.png");
     background-position: center;
     background-size: cover;
+
+    @media (width<768px) {
+        gap: 0rem;
+        padding: 3rem 6% 1rem;
+    }
 }
 
 .text-content {
